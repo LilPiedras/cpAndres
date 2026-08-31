@@ -56,6 +56,8 @@ from routers.RouteModulo_Materia import modulo_materia_route
 from routers.RouteCarreraModulo import modulo_carrera_route
 from routers.RouteUsuarioLogin import usuariolog_router
 from routers.auditoria_router import auditoria_router
+from analitics.kpi import router as analitics_router 
+
 
 app = FastAPI()
 app.include_router(estudiante_router)
@@ -81,6 +83,7 @@ app.include_router(modulo_materia_route)
 app.include_router(modulo_carrera_route)
 app.include_router(usuariolog_router)
 app.include_router(auditoria_router)
+app.include_router(analitics_router)
 
 @app.get("/")
 def index():
